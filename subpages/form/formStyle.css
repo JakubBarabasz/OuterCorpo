@@ -45,7 +45,7 @@ html {
   border-radius: 5px;
   padding: 3px;
   background-color: #7d809b;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .header>span:hover{
@@ -53,7 +53,7 @@ html {
   border-radius: 5px;
   padding: 3px;
   background-color: #3a4391;
-  font-size: 22px;
+  font-size: 18px;
 }
 .slogan {
     font-size: 8px;
