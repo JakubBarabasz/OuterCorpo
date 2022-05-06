@@ -6,13 +6,18 @@
   font-family: 'Roboto', sans-serif;
 }
 
+html {
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(218,218,218,1) 100%);}
+
 a{
-  color: #fff;
+  color: #3d3939;
   text-decoration: none;
   font-weight: bold;
 }
+
 a:hover{
-color: #ffffff
+  color: #3d3939;
 }
 
 .row{
@@ -24,44 +29,64 @@ color: #ffffff
   display: block;
 }
 
-[class*="col-"] {
+[class *= "col-"] {
   float: left;
   padding: 15px;
 }
 
-html {
-  font-family: "Lucida Sans", sans-serif;
-  background-color: #d4d4d4;
-}
+
 
 .header {
-  background-color: #040011;
-  color: #ffffff;
+  background: rgb(128,27,27);
+  background: linear-gradient(142deg, rgba(128,27,27,1) 0%, rgba(218,18,18,1) 74%);
+  color: #FBFBFF;
   padding: 15px;
   font-size: 26px;
 }
+.header>h1 {
+  color: #FBFBFF;
+  -webkit-text-stroke: 1px black; /* width and color */
+}
+
+
+
+.footer {
+  background: rgb(128,27,27);
+  background: linear-gradient(142deg, rgba(128,27,27,1) 0%, rgba(218,18,18,1) 74%);
+  color: #FBFBFF;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
 
 .header>span{
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 3px;
-  background-color: #7d809b;
+  background-color: #d7d7d7;
   font-size: 18px;
 }
 
 .header>span:hover{
-  color: #fff;
-  border-radius: 5px;
-  padding: 3px;
-  background-color: #3a4391;
+  border-radius: 2px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(218,218,218,1) 100%);  padding: 15px;
   font-size: 18px;
 }
+
+.header>span:active{
+  border-radius: 2px;
+  padding: 3px;
+  background-color: #000000;
+  font-size: 18px;
+}
+
 .slogan {
     font-size: 8px;
-    background-color: #0b002b;
+  background: rgb(59, 17, 17);
+
     color: #dfdfdf;
-    padding: 7px;
-    padding-left: 20px;
-  }
+    padding: 7px 7px 7px 20px;
+}
 
 .menu ul {
   list-style-type: none;
@@ -73,32 +98,24 @@ html {
   padding: 8px;
   margin-bottom: 7px;
   background-color: #59429e;
-  color: #040011;
+  color: #0D0106;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .menu li:hover {
-  color: #040011;
-  background-color: #0b002b70;
+  color: #0D0106;
+  background-color: #657ED4;
 }
 
 .aside {
-  background-color: #0b002b70;
-  padding: 15px;
-  color: #040011;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(218,218,218,1) 100%);  padding: 15px;
+  color: #0D0106;
   text-align: center;
   font-size: 14px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  border-radius: 5px;
-}
-
-.footer {
-  background-color: #040011;
-  color: #ffffff;
-  text-align: center;
-  font-size: 12px;
-  padding: 15px;
+  border-radius: 2px;
 }
 
 /* For desktop: */
@@ -107,7 +124,7 @@ html {
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
-.col-6 {width: 50%; color: #040011;}
+.col-6 {width: 50%; color: #0D0106;}
 .col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
 .col-9 {width: 75%;}
@@ -122,3 +139,98 @@ html {
   }
 }
 
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background: rgb(128,27,27);
+  background: linear-gradient(142deg, rgba(128,27,27,1) 0%, rgba(218,18,18,1) 74%);
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background: rgb(128,27,27);
+  background: linear-gradient(142deg, rgba(128,27,27,1) 0%, rgba(218,18,18,1) 74%);
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
