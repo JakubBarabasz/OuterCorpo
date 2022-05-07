@@ -51,6 +51,9 @@ a:hover{
 
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background: rgb(128,27,27);
   background: linear-gradient(142deg, rgba(128,27,27,1) 0%, rgba(218,18,18,1) 74%);
   color: #FBFBFF;
