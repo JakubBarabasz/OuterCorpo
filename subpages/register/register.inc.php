@@ -13,7 +13,7 @@
     $hash = hash("sha256", $pass.$login);
 
     $query = "SELECT `login` FROM `users` WHERE `login`='".$login."'";
-    $results = $conn->query($query); // kto pytał?
+      $results = $conn->query($query); // kto pytał?
 
     if($results->num_rows > 0){
       echo "This login is taken.";

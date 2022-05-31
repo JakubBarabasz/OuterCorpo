@@ -30,6 +30,7 @@
       require("login_form.inc.php");
     }
       //INSERT INTO `sessions` (`id`, `user_id`, `expire_date`) VALUES (0x123, '2', '2022-03-17 14:40:38');
+      //gdzie klin kołd
     ?>
     </div>
 
